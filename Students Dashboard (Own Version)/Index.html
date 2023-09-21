@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Students Dashboard</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- One can choose which Internet Explorer one wants to use for a page. -->
+
+  <link href="/Calendar/Calendar_Primitive.css" rel="Stylesheet" type="text/css">
+  <link href="/To_Do/To_Do.css" rel="Stylesheet" type="text/css">
+  <link href="/Weather/Weather.css" rel="Stylesheet" type="text/css">
+  <link href="Fotos.css" rel="Stylesheet" type="text/css">
+  <link href="/Drag_Drop/Drag_Drop.css" rel="Stylesheet" type="text/css">
+  <link href="Styles.css" rel="Stylesheet" type="text/css">
+
+  <link rel="icon" type="image/x-icon" href="/Images/Dashboard_Layout.png" alt="Dashboard Favicon.">
+  <!-- Favicon icon. -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <!--jQuery einbinden. -->
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> <!--For draggable. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- For Icons. -->
+
+
+</head>
+
+<body>
+
+  <h1>The Dashboard of Doom</h1>
+
+  <div class="cis-suche-go-button-calendar-uhr-container">
+    <div class="cis-suche-go-button-container">
+
+      <details>
+        <summary>
+          <h2>Cis Search</h2>
+        </summary>
+
+        <input type="search" id="query" name="q" placeholder="Cis Suche">
+        <button type="button" class="go-button" aria-label="Go Button">Go</button>
+      </details>
+
+    </div>
+
+
+    <!-- Primitive Calendar Start. -->
+    <div class="primitive-calendar-container">
+      <div id="draggablePrimitiveCalendarContainer" class="no-select-primitive-calendar">
+
+        <details>
+          <summary>
+            <h2>Calendar <i class="fa-solid fa-calendar-days" aria-label="Calendar Icon."></i></h2>
+          </summary>
+          <input type="date" class="primitive-calendar">
+
+          <script src="/Calendar/Calendar_Primitive.js"></script>
+        </details>
+        <script src="/Drag_Drop/Drag_Drop.js"></script>
+      </div>
+    </div>
+
+    <!-- Primitive Calendar End. -->
+
+    <div class="uhr-container">
+
+      <div id="draggableUhrContainer" class="no-select-uhr">
+
+        <details>
+          <summary>
+            <h2>Clock
+              <i class="fa-solid fa-clock" aria-label="Clock Icon."></i>
+            </h2>
+          </summary>
+
+          <div tabindex="0" id="uhr"></div>
+
+          <script src="Uhr.js"></script>
+
+        </details>
+        <script src="/Drag_Drop/Drag_Drop.js"></script>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="to-do-weather-container">
+
+    <!--To-Do Start.-->
+
+    <div class="to-do-container">
+      <div id="draggableToDoContainer" class="no-select-to-do">
+
+        <details>
+          <summary>
+            <h2>To Do List
+              <i class="fa-solid fa-clipboard-list" aria-label="To Do List Icon."></i>
+            </h2>
+          </summary>
+
+          <div class="to-do-button-container">
+            <input type="text" id="input-to-do" placeholder="For example do homework.">
+            <span tabindex="0" onclick="newElement()" class="to-do-button">Add</span>
+          </div>
+
+          <ul tabindex="0" id="to-do-list"></ul>
+
+          <script src="/To_Do/To_Do.js"></script>
+        </details>
+        <script src="/Drag_Drop/Drag_Drop.js"></script>
+      </div>
+    </div>
+
+    <!--To-Do End.-->
+
+
+    <!--Weather Start.-->
+
+    <div class="weather-container">
+      <div id="draggableWeatherContainer" class="no-select-weather">
+
+        <details>
+          <summary>
+            <h2>Weather
+              <i class="fa-solid fa-cloud-rain" aria-label="Weather Icon."></i>
+            </h2>
+          </summary>
+
+          <form id="weather-form">
+            <label for="input-weather">Search for a city or an area</label>
+
+            <div class="form-row">
+              <input type="text" placeholder="For example Barcelona." name="input-weather" id="input-weather" autofocus>
+              <button type="submit" class="weather-submit-button btn-default w-5 py-0.5"
+                aria-label="Weather Submit Button">Search</button>
+
+            </div> <!-- form-row -->
+
+            <p class="form-msg"></p>
+          </form>
+
+          <section>
+            <ul class="cities">
+            </ul>
+          </section>
+
+          <script src="/Weather/Weather.js" defer></script>
+
+        </details>
+        <script src="/Drag_Drop/Drag_Drop.js"></script>
+      </div>
+
+    </div>
+    <!--Weather End.-->
+
+  </div>
+
+
+  <!-- Fancy Calendar Start. -->
+  <div class="fancy-calendar-container">
+    <div id="draggableFancyCalendarContainer" class="no-select-fancy-calendar">
+
+      <details>
+        <summary>
+          <h2>Calendar <i class="fa-solid fa-calendar-days" aria-label="Calendar Icon."></i></h2>
+        </summary>
+
+        <a href="/Calendar/Calendar_Fancy.html">Calendar</a>
+      </details>
+      <script src="/Drag_Drop/Drag_Drop.js"></script>
+    </div>
+  </div>
+  <!-- Fancy Calendar End. -->
+
+
+
+  <!--Fotos Start.-->
+  <div class="fotos-container">
+
+    <div id="draggableFotosContainer" class="no-select-fotos">
+
+      <details>
+        <summary>
+          <h2>Fotos <i class="fa-solid fa-image" aria-label="Fotos Icon."></i></h2>
+        </summary>
+
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <!-- data-bs-ride tells the carousel to start animating once the page has been refreshed.-->
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="numbertext">1 / 3</div>
+              <img tabindex="0" src="/Images/Uncle.jpg" alt="Uncle saying: Uncle never leaves without sock."
+                style="width:20rem;height:20rem;">
+              <div class="text">Uncle.</div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="numbertext">2 / 3</div>
+              <img tabindex="0" src="/Images/Stitch.jpg" alt="Blue alien holding a guitar."
+                style="width:20rem;height:20rem;">
+              <div class="text">Stitch.</div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="numbertext">3 / 3</div>
+              <img tabindex="0" src="/Images/Dr.Hamsterviel.jpg" alt="Alien Hamster laughing evily."
+                style="width:20rem;height:20rem;">
+              <div class="text">Dr. Hamsterviel.</div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"> <!--data-bs-target: Something to do with dropdown.-->
+            <span tabindex="0" class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" aria-label="Previous Picture">Previous</span>
+            <!--For example for keyboard users. Is displayed when it is focused.-->
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span tabindex="0" class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" aria-label="Next Picture">Next</span>
+          </button>
+        </div>
+    </div>
+
+    </details>
+    <script src="/Drag_Drop/Drag_Drop.js"></script>
+
+  </div>
+  <!--Fotos End.-->
+
+
+
+  <!-- Message that appears when hovering over icon. -->
+  <script>
+    $("h2").hover(function () {
+      $(this).css('cursor', 'pointer').attr('title', 'Press to exapnd/collapse item.');
+    }, function () {
+      $(this).css('cursor', 'auto');
+    });
+  </script>
+
+  <!-- Dragging stuff: Option 2. 
+  <script>
+    $(function () {
+      $("#draggablePrimitiveCalendarContainer").draggable();
+    });
+    $(function () {
+      $("#draggableFancyCalendarContainer").draggable();
+    });
+    $(function () {
+      $("#draggableFotosContainer").draggable();
+    });
+    $(function () {
+      $("#draggableWeatherContainer").draggable();
+    });
+    $(function () {
+      $("#draggableToDoContainer").draggable();
+    });
+    $(function () {
+      $("#draggableUhrContainer").draggable();
+    });
+    $(function () {
+      $("#draggableUhrContainer").draggable();
+    });
+    $(function () {
+      $("#query").draggable();
+    });
+  </script>-->
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>     This seems to be obsolete. -->
+
+
+</body>
+
+</html>

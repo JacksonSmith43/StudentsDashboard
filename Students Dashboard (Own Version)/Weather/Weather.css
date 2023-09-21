@@ -1,0 +1,107 @@
+/* ================================================= */
+/* Forms */
+/* ================================================= */
+form {
+    max-width: 20rem;
+
+}
+
+
+
+#input-weather {
+    color: white;
+    background-color: rgb(27, 26, 26);
+    width: 13rem;
+
+
+}
+
+
+#input-weather::placeholder {
+    color: rgb(221, 218, 218);
+}
+
+
+#temperature-number {
+    font-size: 3rem;
+}
+
+
+form button {
+
+    height: 2.75rem;
+    width: 3.5rem;
+    background-color: rgb(51, 255, 0);
+    border: none;
+    display: flex;
+    font-weight: bold;
+
+    align-items: center;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: grey;
+}
+
+form button:active {
+    background-color: blue;
+}
+
+.form-msg {
+    /*Message when entering incorrect city.*/
+
+    background-color: rgb(224, 37, 37);
+    width: 80%;
+    margin-left: .75rem;
+    opacity: 1;
+
+}
+
+.form-msg.visible {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: .5rem;
+
+}
+
+
+/* ================================================= */
+/* Cities */
+/* ================================================= */
+.cities {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0 0 4rem;
+    gap: 2rem;
+}
+
+.cities li {
+    list-style: none;
+    background-color: white;
+    align-items: center;
+    padding: 1.5rem;
+    color: black;
+}
+
+.city__conditions {
+    color: rgb(24, 23, 23);
+    margin-bottom: 1rem;
+}
+
+.city__country {
+    color: white;
+    background-color: green;
+    border-radius: var(--global-border-radius);
+    margin-left: .5rem;
+}
+
+
+.weather-container {
+    margin-left: 18rem;
+}

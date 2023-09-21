@@ -1,0 +1,93 @@
+body {
+    background-color: #F0F0F0;
+}
+
+.Go_Button {
+    color: red;
+}
+
+
+
+.Date {
+    margin-left: 200px;
+    color: blue;
+}
+
+
+
+
+.To_Do_Button {
+    color: green;
+}
+
+.To_Do_Container {
+    cursor: pointer;
+    background-color: #bcc29d;
+    padding: 7em;
+}
+
+
+
+
+.Weather_Button {
+    background-color: rgb(108, 124, 170);
+    cursor: pointer;
+}
+
+.Weather_Container {
+    background-color: rgb(108, 124, 170);
+    cursor: pointer;
+
+    margin-left: 1em;
+    padding: 7em;
+}
+
+
+
+
+.Fotos_Button {
+    background-color: rgb(197, 189, 189);
+
+    color: black;
+    cursor: pointer;
+    margin-left: 1em;
+    display: flex;
+    padding: 7em;
+}
+
+.Fotos_Container {
+    margin-left: 1em;
+}
+
+
+
+
+.Cis_Suche_Go_Button_Date_Container {
+    display: inline-flex;
+    margin-left: 0.5em;
+
+}
+
+
+
+
+
+
+.To_Do_Weather_Fotos_Container {
+    display: flex;
+    margin-top: 5em;
+    margin-left: 0.5em;
+}
+
+
+@media (max-width: 1000px) {
+    p{
+        font-size: 1.5em;
+    }
+}
+.btn{
+    color: green;
+}
+
+
+/*Termine hizufügen.*/

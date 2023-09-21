@@ -1,0 +1,296 @@
+* {
+    list-style: none;
+    /*Gets rid of the arrows.*/
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    background-image: url('Images/Circuit_Board.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.go-button {
+    color: black;
+    border-color: black;
+    background-color: rgb(51, 255, 0);
+    margin-left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-weight: bold;
+}
+
+#query {
+    /*Cis Suche*/
+    background-color: black;
+    color: white;
+}
+
+
+.cis-suche-go-button-container {
+    display: flex;
+}
+
+
+#uhr {
+    font-size: 2rem;
+}
+
+.uhr-container {
+    margin-left: 20rem;
+    border-width: 1rem;
+}
+
+
+:focus {
+    /*Selects the element, that has focus.*/
+    outline: 0.2rem solid red;
+    border-radius: 0.3rem;
+}
+
+.weather-button:hover,
+.to-do-button:hover,
+.go-button:hover,
+.primitive-calendar:hover,
+#uhr:hover {
+    /*Changes the colour, when hovering over something.*/
+    background-color: gray;
+}
+
+a:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+
+.cis-suche-go-button-calendar-uhr-container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+
+.to-do-weather-container {
+    display: flex;
+    margin-top: 5rem;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 4rem;
+}
+
+
+h1 {
+    padding: 1rem 0rem 2rem 0rem;
+    text-align: center;
+}
+
+h2:hover {
+    background-color: gray;
+}
+
+h2 {
+    margin-right: 2rem;
+    text-decoration: underline;
+}
+
+
+
+/*Mobile devices.*/
+@media (min-width:320px) and (max-width:480px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .to-do-weather-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+
+    .cis-suche-go-button-calendar-uhr-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cis-suche-go-button-container {
+        display: flex;
+        margin-left: 2rem;
+    }
+
+    .primitive-calendar-container {
+        margin-left: 2rem;
+        margin-top: 3rem;
+        width: 14rem;
+        margin-bottom: 3rem;
+    }
+
+    .uhr-container {
+        margin-top: 7rem;
+        margin-left: 2rem;
+    }
+
+
+    .to-do-container {
+        margin-right: 1rem;
+        margin-bottom: 15rem;
+        margin-left: 2rem;
+        margin-top: 4rem;
+    }
+
+
+    .weather-container {
+        margin-bottom: 15rem;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+
+    .fotos-container {
+        margin-left: 4rem;
+        margin-top: 57rem;
+    }
+
+    .fancy-calendar-container {
+        margin-left: 4rem;
+        margin-top: 50rem;
+
+    }
+}
+
+
+
+
+/*Tablets and iPads.*/
+@media (min-width:769px) and (max-width:810px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .to-do-weather-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 2rem;
+    }
+
+
+    .cis-suche-go-button-calendar-uhr-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .cis-suche-go-button-container {
+        display: flex;
+        margin-left: 2rem;
+
+    }
+
+    .primitive-calendar-container {
+        margin-left: 4rem;
+        width: 14rem;
+
+    }
+
+    .uhr-container {
+        margin-left: 4rem;
+    }
+
+
+    .to-do-container {
+        margin-right: 4rem;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+    }
+
+
+    .weather-container {
+        margin-bottom: 2rem;
+        margin-left: 19rem;
+    }
+
+
+    .fotos-container {
+        margin-left: 29rem;
+        margin-top: 30rem;
+
+    }
+
+    .fancy-calendar-container {
+        margin-left: 4rem;
+        margin-top: 30rem;
+    }
+}
+
+
+
+
+
+
+
+
+/*Desktops, large screens, Extra large screees, TV.*/
+@media (min-width:811px) and (max-width:2641px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .to-do-weather-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 2rem;
+    }
+
+
+    .cis-suche-go-button-calendar-uhr-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .cis-suche-go-button-container {
+        display: flex;
+        margin-left: 2rem;
+
+    }
+
+    .primitive-calendar-container {
+        margin-left: 7rem;
+        width: 14rem;
+
+    }
+
+    .uhr-container {
+        margin-left: 4rem;
+    }
+
+
+    .to-do-container {
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+    }
+
+
+    .weather-container {
+        margin-bottom: 2rem;
+        margin-left: 21rem;
+    }
+
+
+    .fotos-container {
+        margin-left: 63rem;
+    }
+
+    .fancy-calendar-container {
+        margin-left: 47rem;
+        margin-top: 5rem;
+    }
+
+}

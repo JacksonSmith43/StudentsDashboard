@@ -1,0 +1,61 @@
+#draggableToDoContainer {
+    position: absolute;
+
+}
+
+.no-select-to-do {
+    user-select: none;
+}
+
+#draggableWeatherContainer {
+    position: absolute;
+
+}
+
+
+.no-select-weather {
+    user-select: none;
+}
+
+
+#draggableFotosContainer {
+    position: absolute;
+
+}
+
+
+.no-select-fotos {
+    user-select: none;
+}
+
+#draggableUhrContainer {
+    position: absolute;
+
+}
+
+
+.no-select-uhr {
+    user-select: none;
+}
+
+
+#draggablePrimitiveCalendarContainer {
+    position: absolute;
+
+}
+
+
+.no-select-primitive-calendar {
+    user-select: none;
+}
+
+
+#draggableFancyCalendarContainer {
+    position: absolute;
+
+}
+
+
+.no-select-fancy-calendar {
+    user-select: none;
+}

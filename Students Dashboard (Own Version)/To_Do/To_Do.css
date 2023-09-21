@@ -1,0 +1,113 @@
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Remove margins and padding from the list */
+#to-do-list {
+    margin: 0;
+    padding: 0;
+    margin-top: 6rem;
+
+}
+
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    list-style-type: none;
+    background: white;
+    font-size: 1.5rem;
+    transition: 0.2s;
+
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: rgb(248, 245, 245);
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: rgb(199, 198, 198);
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: grey;
+    color: white;
+    text-decoration: line-through red;
+    
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: green;
+    border-style: solid;
+    border-width: 0 0.05rem 0.05rem 0;
+    top: 1.55rem;
+    left: 1rem;
+    transform: rotate(45deg);
+    height: 1rem;
+    width: 0.5rem;
+}
+
+/* Style the close button AKA getting rid of a To-Do.*/
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem 2rem 1rem 2rem;
+    color: red;
+}
+
+.close:hover {
+    background-color: #810505;
+}
+
+
+#input-to-do {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 0.5rem;
+    float: left;
+    font-size: 1.05rem;
+    width: 14rem;
+
+}
+
+/* Style the "Add" button */
+.to-do-button {
+    padding: 0.5rem;
+    background-color: rgb(51, 255, 0);
+    color: black;
+    float: left;
+    text-align: center;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    margin-left: 0.5rem;
+}
+
+
+
+.to-do-container {
+    /* border-color: red;*/
+    /*Border-style needed.*/
+    /*border-style: solid;*/
+    margin-right: 4rem;
+    margin-left: 2rem;
+}
+
+
+.to-do-button-container {
+    margin-top: 2rem;
+}
